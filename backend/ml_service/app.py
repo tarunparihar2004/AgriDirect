@@ -64,4 +64,5 @@ def predict():
         return jsonify({"error": str(e)}), 400
 
 if __name__ == '__main__':
-    app.run(port=8000, debug=True)
+    # Use port 8000 and bind to 0.0.0.0 so Render can find it
+    app.run(host='0.0.0.0', port=8000)
